@@ -1,6 +1,8 @@
 package pages.SignInPage;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.BasePage;
@@ -8,6 +10,8 @@ import pages.BasePage;
 public class SignInPage extends BasePage {
     public static final Logger LOG = LoggerFactory.getLogger(SignInPage.class);
     public static SignInPage instance;
+
+
 
     private SignInPage() {
 
@@ -20,14 +24,18 @@ public class SignInPage extends BasePage {
         return instance;
     }
 
-    private By signInButton = By.id("btn1");
-    //aici locatorii cu private by
-    public void clicksignInButton (){
-        LOG.info("Click 'Sign in' button");
-        driver.findElement(signInButton).click();
+
+
+    private By accountIcon = By.xpath("//label[@class=\"user-dropnav\"]");
+
+
+    public void hoverAccountIcon() {
+
+        Actions actions = new Actions(driver);
+        LOG.info("Hover 'account' icon");
+        WebElement hoverAccountIcon= driver.findElement(accountIcon);
+        actions.moveToElement(hoverAccountIcon).perform();
     }
-    public boolean isSignInButtonDisplayed(){
-        LOG.info("Veridy if 'Sign in' button is displayed");
-        return driver.findElement(signInButton).isDisplayed();
-    }
+
+
 }
