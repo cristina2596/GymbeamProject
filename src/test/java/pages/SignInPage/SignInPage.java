@@ -12,7 +12,6 @@ public class SignInPage extends BasePage {
     public static SignInPage instance;
 
 
-
     private SignInPage() {
 
     }
@@ -25,16 +24,38 @@ public class SignInPage extends BasePage {
     }
 
 
-
     private By accountIcon = By.xpath("//label[@class=\"user-dropnav\"]");
+    private By emailLogin = By.id("email");
+    private By passwordLogin = By.id("pass");
+    private By conectati = By.xpath("//*[@id=\"send2\"]\n");
 
 
     public void hoverAccountIcon() {
 
         Actions actions = new Actions(driver);
         LOG.info("Hover 'account' icon");
-        WebElement hoverAccountIcon= driver.findElement(accountIcon);
+        WebElement hoverAccountIcon = driver.findElement(accountIcon);
         actions.moveToElement(hoverAccountIcon).perform();
+    }
+
+    public void clickAccountIcon() {
+        LOG.info("Click 'account' icon");
+        driver.findElement(accountIcon).click();
+    }
+
+    public void insertEmailLogin(String EmailLogin) {
+        LOG.info("Insert 'email login' address");
+        driver.findElement(emailLogin).sendKeys(EmailLogin);
+    }
+
+    public void insertPasswordLogin(String PasswordLogin) {
+        LOG.info("Insert 'password login'");
+        driver.findElement(passwordLogin).sendKeys(PasswordLogin);
+    }
+
+    public void clickConectatiVa() {
+        LOG.info("Click 'conectatiVa' button");
+        driver.findElement(conectati).click();
     }
 
 
