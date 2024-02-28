@@ -28,7 +28,7 @@ public class SignInPage extends BasePage {
     private By emailLogin = By.id("email");
     private By passwordLogin = By.id("pass");
     private By conectati = By.xpath("//*[@id=\"send2\"]\n");
-
+    private By logoHomePage = By.xpath("//a[@class='logo no-lozad']");
 
     public void hoverAccountIcon() {
 
@@ -58,5 +58,8 @@ public class SignInPage extends BasePage {
         driver.findElement(conectati).click();
     }
 
-
+    public boolean islogoHomePageDisplayed() {
+        LOG.info("Verify if 'logo home page'button is displayed");
+        return driver.findElement(logoHomePage).isDisplayed();
+    }
 }

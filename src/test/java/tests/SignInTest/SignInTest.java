@@ -2,15 +2,20 @@ package tests.SignInTest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
+
+import static pages.BasePage.driver;
+import static pages.BasePage.sleep;
 
 public class SignInTest extends BaseTest {
     public static final Logger LOG = LoggerFactory.getLogger(SignInTest.class);
 
+
     @Test
     public void signIn() {
-//correct id & password-TEST
+//LOG IN TEST
 
         LOG.info("Hover 'account icon'");
         signInPage.hoverAccountIcon();
@@ -30,5 +35,11 @@ public class SignInTest extends BaseTest {
         LOG.info("Click 'conectatiVa' button");
         signInPage.clickConectatiVa();
 
+        LOG.info("Verify if 'logo home page' button is displayed");
+        Assert.assertTrue(signInPage.islogoHomePageDisplayed(), "Logo home page button is displayed");
+
+
+
+        sleep(3000L);
     }
 }
