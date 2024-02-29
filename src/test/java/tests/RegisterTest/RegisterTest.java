@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
+import static pages.BasePage.sleep;
+
 public class RegisterTest extends BaseTest {
     public static final Logger LOG = LoggerFactory.getLogger(RegisterTest.class);
 
@@ -14,8 +16,16 @@ public class RegisterTest extends BaseTest {
         LOG.info("Click 'account' icon");
         signInPage.clickAccountIcon();
 
-//        LOG.info("Click 'creati-va un cont' button");
-//        registerPage.createContButton();
+        sleep(3000L);
+
+        LOG.info("Click consent");
+        registerPage.acceptConsent();
+
+
+        sleep(3000L);
+
+        LOG.info("Click 'creati-va un cont' button");
+        registerPage.createContButton();
 
 
     }

@@ -20,16 +20,20 @@ public class RegisterPage extends BasePage {
         return instance;
     }
 
-    private By creatiCont = By.xpath("/html/body/div[3]/main/div[3]/div/div[2]/div[2]/div[2]/div/div/a/span");
-
+    private By creatiCont = By.xpath("//div[@class='block block-new-customer']//a[@class='action create primary']");
+    private By consent = By.id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll");
 
     public void createContButton() {
         LOG.info("Press 'creati-va cont'button");
         driver.findElement(creatiCont).click();
     }
 
-
+    public void acceptConsent() {
+        LOG.info("Accept consent");
+        driver.findElement(consent).click();
+    }
 }
 
 ////div[@class='block block-new-customer']//a[@class='action create primary']-locator "creativa cont"
 //nu merge locatorul
+//(//a[@class='action create primary'])[1]"
