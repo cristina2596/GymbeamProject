@@ -3,6 +3,8 @@ package tests;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import pages.BasePage;
+import pages.BlogSectionPage.BlogSectionPage;
+import pages.MyOrdersPage.MyOrdersPage;
 import pages.RegisterPage.RegisterPage;
 import pages.SignInPage.ForgotPasswordPage;
 import pages.SignInPage.SignInPage;
@@ -14,6 +16,8 @@ public class BaseTest {
     public RegisterPage registerPage = RegisterPage.getInstance();
     public ForgotPasswordPage forgotPasswordPage = ForgotPasswordPage.getInstance();
     public SubscribePage subscribePage = SubscribePage.getInstance();
+    public BlogSectionPage blogSectionPage = BlogSectionPage.getInstance();
+    public MyOrdersPage myOrdersPage = MyOrdersPage.getInstance();
 
     @BeforeSuite
     public void init() {

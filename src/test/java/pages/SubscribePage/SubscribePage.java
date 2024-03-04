@@ -22,7 +22,7 @@ public class SubscribePage extends BasePage {
 
     private By inputEmail = By.id("subscriberEmail");
     private By sendButton = By.xpath("//button[@title='TRIMITE']");
-    private By confirmation = By.xpath("/html/body/div[4]/main/div/div/div/div[3]/div/div[3]/div/div/div\n");
+    private By confirmation = By.xpath("//div[@class='message-success success message']");
 
     public void inputEmailAddress(String EmailSubscribe) {
         LOG.info("Insert 'email ' address");
@@ -39,5 +39,4 @@ public class SubscribePage extends BasePage {
     }
 
 
-    //nu merge locatorul confirmation message
 }

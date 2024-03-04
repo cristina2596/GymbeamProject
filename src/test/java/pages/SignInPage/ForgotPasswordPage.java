@@ -33,6 +33,7 @@ public class ForgotPasswordPage extends BasePage {
     public void completeEmailField(String Email) {
         LOG.info("Complete e-mail field");
         driver.findElement(emailField).sendKeys(Email);
+
     }
 
     public void resetPasswordButton() {

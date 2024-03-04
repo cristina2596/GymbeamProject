@@ -1,21 +1,18 @@
-package tests.SignInTest;
+package tests.MyOrdersTest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
 import static pages.BasePage.sleep;
 
-public class SignInTest extends BaseTest {
-    public static final Logger LOG = LoggerFactory.getLogger(SignInTest.class);
+public class MyOrdersTest extends BaseTest {
+    public static final Logger LOG = LoggerFactory.getLogger(MyOrdersTest.class);
 
 
     @Test
-    public void signIn() {
-
-
+    public void myOrdersSection() {
         LOG.info("Hover 'account icon'");
         signInPage.hoverAccountIcon();
 
@@ -37,12 +34,10 @@ public class SignInTest extends BaseTest {
 
         LOG.info("Click 'conectatiVa' button");
         signInPage.clickConectatiVa();
+        sleep(5000);
 
-
-
-        LOG.info("Verify if 'logo home page' button is displayed");
-        Assert.assertTrue(signInPage.islogoHomePageDisplayed(), "Logo home page button is displayed");
-
-        sleep(3000);
+        LOG.info("Click homepage logo");
+        myOrdersPage.clickHomePage();
+        sleep(5000);
     }
 }
