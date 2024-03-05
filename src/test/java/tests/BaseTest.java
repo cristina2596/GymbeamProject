@@ -6,6 +6,8 @@ import pages.BasePage;
 import pages.BlogSectionPage.BlogSectionPage;
 import pages.MyOrdersPage.MyOrdersPage;
 import pages.RegisterPage.RegisterPage;
+import pages.RemoveProductPage.RemoveProductPage;
+import pages.SearchBarPage.SearchBarPage;
 import pages.SignInPage.ForgotPasswordPage;
 import pages.SignInPage.SignInPage;
 import pages.SubscribePage.SubscribePage;
@@ -18,6 +20,9 @@ public class BaseTest {
     public SubscribePage subscribePage = SubscribePage.getInstance();
     public BlogSectionPage blogSectionPage = BlogSectionPage.getInstance();
     public MyOrdersPage myOrdersPage = MyOrdersPage.getInstance();
+    public RemoveProductPage removeProductPage = RemoveProductPage.getInstance();
+    public SearchBarPage searchBarPage=SearchBarPage.getInstance();
+
 
     @BeforeSuite
     public void init() {

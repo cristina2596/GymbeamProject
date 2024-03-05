@@ -38,6 +38,24 @@ public class MyOrdersTest extends BaseTest {
 
         LOG.info("Click homepage logo");
         myOrdersPage.clickHomePage();
-        sleep(5000);
+        sleep(3000);
+
+        LOG.info("Click 'account' icon");
+        myOrdersPage.clickAccountIcon();
+        sleep(1000);
+        LOG.info("Click 'my orders'");
+        myOrdersPage.clickMyOrders();
+        sleep(1000);
+
+        LOG.info("Click 'view order'");
+        myOrdersPage.clickViewOrder();
+        sleep(1000);
+
+        LOG.info("Click 'back to my orders' button");
+        myOrdersPage.clickBackAction();
+        sleep(1000);
+
+        LOG.info("Click 'homepage' logo button");
+        myOrdersPage.clickHomePageButton();
     }
 }

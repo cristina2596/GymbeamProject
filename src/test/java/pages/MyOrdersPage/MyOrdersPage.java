@@ -23,9 +23,35 @@ public class MyOrdersPage extends BasePage {
     }
 
     private By gymBeamLogo = By.xpath("//img[@alt='GymBeam s.r.o.']");
+    private By accountIcon = By.xpath("//a[@title='Autentificare']");
+    private By myOrders = By.xpath("//li[.='Comenzile mele']");
+    private By viewOrder = By.xpath("//a[@href='https://gymbeam.ro/sales/order/view/order_id/28589554/']/span[.='Vedeți comanda']");
+    private By backAction = By.xpath("//a[@class='action back']");
+    private By goHomePage = By.xpath("//img[@alt='GymBeam s.r.o.']");
 
     public void clickHomePage() {
         LOG.info("Go to homepage");
         driver.findElement(gymBeamLogo).click();
+    }
+
+    public void clickAccountIcon() {
+        driver.findElement(accountIcon).click();
+    }
+
+    public void clickMyOrders() {
+        driver.findElement(myOrders).click();
+    }
+
+    public void clickViewOrder() {
+        driver.findElement(viewOrder).click();
+    }
+
+    public void clickBackAction() {
+        driver.findElement(backAction).click();
+
+
+    }
+    public void clickHomePageButton() {
+            driver.findElement(goHomePage).click();
     }
 }
