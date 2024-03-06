@@ -37,7 +37,7 @@ public class SignInTest extends BaseTest {
 
         LOG.info("Click 'conectatiVa' button");
         signInPage.clickConectatiVa();
-
+sleep (1500);
 
 
         LOG.info("Verify if 'logo home page' button is displayed");

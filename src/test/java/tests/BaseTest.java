@@ -2,8 +2,10 @@ package tests;
 
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import pages.AddToCartPopUpPage.AddToCartPopUpPage;
 import pages.BasePage;
 import pages.BlogSectionPage.BlogSectionPage;
+import pages.MakeAnOrderPage.MakeAnOrderWithAccountPage;
 import pages.MyOrdersPage.MyOrdersPage;
 import pages.RegisterPage.RegisterPage;
 import pages.RemoveProductPage.RemoveProductPage;
@@ -22,6 +24,8 @@ public class BaseTest {
     public MyOrdersPage myOrdersPage = MyOrdersPage.getInstance();
     public RemoveProductPage removeProductPage = RemoveProductPage.getInstance();
     public SearchBarPage searchBarPage=SearchBarPage.getInstance();
+    public AddToCartPopUpPage addToCartPopUpPage= AddToCartPopUpPage.getInstance();
+    public MakeAnOrderWithAccountPage makeAnOrderWithAccountPage= MakeAnOrderWithAccountPage.getInstance();
 
 
     @BeforeSuite
