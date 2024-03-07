@@ -24,11 +24,11 @@ public class RemoveProductPage extends BasePage {
     }
 
     private By fitnessClothes = By.xpath("//span[.='Îmbrăcăminte fitness']");
-    private By fitnessLeggings = By.xpath("//a[@title='Colanți pentru femei Scrunch Black - GymBeam']");
+    private By fitnessLeggings = By.xpath("//div[@class='product-item-info']/a[@href='https://gymbeam.ro/pantalonii-de-sport-slimfit-negri-gym-beam.html']");
     private By sizeDropdown = By.xpath("//select[@class='super-attribute-select']");
     private By plusIcon = By.xpath("//div[@class='action-plus']");
     private By addToCart = By.id("product-addtocart-button");
-    private By confirmationMessage = By.xpath("//div[@class='message-success success message']/div[contains(.,'Ați adăugat Colanți pentru femei Scrunch Black - GymBeam în coșul de cumpărături')]");
+    private By confirmationMessage = By.xpath("//div[@class='page messages']//div[@class='messages']/div[contains(.,'Ați adăugat Pantaloni sport Slimfit Black - GymBeam în coșul de cumpărături.')]");
     private By cartIcon = By.xpath("//span[@class='badge-wrapper']");
     private By removeItem = By.xpath("//a[@title='Eliminați elementul']");
     private By noProductsMessage = By.xpath("//div[@class='cart-empty']");

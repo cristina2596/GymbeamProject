@@ -16,25 +16,26 @@ public class RemoveProductTest extends BaseTest {
     public void removeProduct() {
         String size = "M";
 
-        sleep(4000);
+        sleep(6000);
         LOG.info("Consent");
         registerPage.acceptConsent();
+        sleep(3000);
 
         LOG.info("Click 'fitness clothes' category");
         removeProductPage.clickFitnessClothes();
-        sleep(1000);
+        sleep(2000);
 
         LOG.info("Click 'fitness leggings' item");
         removeProductPage.clickFitnessLeggings();
-        sleep(1000);
+        sleep(3000);
 
         LOG.info("Select size");
         removeProductPage.setSizeDropdown(size);
-        sleep(500);
+        sleep(3500);
 
         LOG.info("Select quantity");
         removeProductPage.setQuantity();
-        sleep(500);
+        sleep(1500);
 
         LOG.info("Click 'add to cart' button");
         removeProductPage.addToCartButton();

@@ -13,7 +13,7 @@ public class SubscribeTest extends BaseTest {
     @Test
     public void subscribe() {
         String emailAddress = "jisijoh912@hidelux.com";
-        sleep(1000);
+        sleep(5000);
         LOG.info("Consent");
         registerPage.acceptConsent();
 

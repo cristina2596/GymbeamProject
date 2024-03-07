@@ -27,13 +27,15 @@ public class MakeAnOrderWithAccountPage extends BasePage {
     private By weightDropdown = By.xpath("//select[@class='super-attribute-select']");
     private By flavourDropdown = By.id("attribute307");
     private By nutritieSportivaTab=By.xpath("//a[.='Nutriție sportivă']");
-    private By yumBeastPink=By.xpath("//div[@class='product-item-info']/a[@href='https://gymbeam.ro/yum-yum-whey-1000-g-beastpink.html']");
+    private By yumBeastPink=By.xpath("//div[@class='product-item-info']/a[@href='https://gymbeam.ro/gold-standard-100-proteine-din-zer-optimum-nutrition.html']");
     private By discountCodeBox=By.id("coupon");
     private By discountApplied=By.xpath("//td[@data-th='Reducere']");
     private By submitDiscountButton=By.xpath("//button[@class='action add primary']");
     private By finishOrderButton=By.xpath("//div[@class='cart-container-bottom']//span[.='Mergeți la finalizarea comenzii']");
-    private By dpdCurierButton=By.id("delivery_dpd");
-    private By continueButton=By.xpath("//button[contains(.,'Înainte')]");
+    private By courierButton=By.xpath("//label[@for='delivery_fancourier_delivery']");
+    private By backButton=By.xpath("//div[@id='shipping-method-buttons-container']//a[contains(.,'Înapoi')]");
+    private By emptyCart=By.xpath("//a[@title='Eliminați elementul']");
+    private By homePage=By.xpath("//img[@alt='GymBeam s.r.o.']");
 
     public void clickAlimenteSanatoasePage() {
         LOG.info("Click 'Alimente sanatoase' page");
@@ -95,16 +97,23 @@ public class MakeAnOrderWithAccountPage extends BasePage {
     public void clickFinishOrderButton (){
         LOG.info("Click 'finish order' button");
         driver.findElement(finishOrderButton).click();
+
     }
 
-    public void clickDPDradioButton(){
+    public void clickcourierButton(){
+        LOG.info("Select delivery method");
+        driver.findElement(courierButton);
+    }
+    public void clickBackButton1(){
         LOG.info("Click 'dpd' as delivery method");
-        driver.findElement(dpdCurierButton).click();
+        driver.findElement(backButton).click();
+
 
     }
-    public void clickContinueButton(){
-        LOG.info("Click 'continue' button ");
-        driver.findElement(continueButton).click();
-    }
+public void goBackToHomepage(){
+        LOG.info("return to homepage");
+        driver.findElement(homePage).click();
+}
+
 }
 

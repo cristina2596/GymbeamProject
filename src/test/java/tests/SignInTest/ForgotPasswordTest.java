@@ -14,17 +14,20 @@ public class ForgotPasswordTest extends BaseTest {
     @Test
     public void forgotPassword() {
         String Email = "jisijoh912@hidelux.com";
-        sleep(1000);
-        LOG.info("Consent");
-        registerPage.acceptConsent();
+
 
         LOG.info("Click 'account' icon");
         signInPage.clickAccountIcon();
 
+        sleep(5000);
+        LOG.info("Consent");
+        registerPage.acceptConsent();
 
+        sleep(2000);
         LOG.info("Click 'v-ati uitat parola' button");
         forgotPasswordPage.clickForgotPassword();
 
+        sleep(1000);
         LOG.info("Insert email");
         forgotPasswordPage.completeEmailField(Email);
 

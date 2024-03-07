@@ -16,14 +16,16 @@ public class SearchBarTest extends BaseTest {
     public void searchBarTest() {
         String item1 = "shaker";
         String item2 = "fier";
-        sleep(4000);
+        sleep(6000);
         LOG.info("Consent");
         registerPage.acceptConsent();
-        sleep(500);
+        sleep(2500);
 
         LOG.info("Search first item");
         searchBarPage.setSearchBar(item1);
         sleep(2000);
+
+
 
         LOG.info("Search shaker negru");
         searchBarPage.setShakerNegru();

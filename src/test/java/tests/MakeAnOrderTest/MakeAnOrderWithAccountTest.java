@@ -16,7 +16,7 @@ public class MakeAnOrderWithAccountTest extends BaseTest {
     public void orderWithAccount() {
         String weight = "340";
         String flavour = "crocant";
-        String wheyFlavour = "strawberry";
+        String wheyFlavour = "bogat";
         String code="andra5";
 
         LOG.info("Hover 'account icon'");
@@ -57,11 +57,11 @@ public class MakeAnOrderWithAccountTest extends BaseTest {
 
         LOG.info("Click 'unt de arahide'");
         makeAnOrderWithAccountPage.clickUntDeArahide();
-        sleep(1000);
+        sleep(2000);
 
         LOG.info("Select weight");
         makeAnOrderWithAccountPage.selectWeight(weight);
-        sleep(1500);
+        sleep(2500);
 
         LOG.info("Select flavour");
         makeAnOrderWithAccountPage.selectFlavour(flavour);
@@ -77,11 +77,11 @@ public class MakeAnOrderWithAccountTest extends BaseTest {
 
         LOG.info("Click 'yum beast pink' product");
         makeAnOrderWithAccountPage.clickYumBestPink();
-        sleep(500);
+        sleep(1500);
 
         LOG.info("Select whey flavour");
         makeAnOrderWithAccountPage.selectWheyFlavour(wheyFlavour);
-        sleep(500);
+        sleep(1500);
 
         LOG.info("Click 'add to cart' button");
         removeProductPage.addToCartButton();
@@ -97,22 +97,27 @@ public class MakeAnOrderWithAccountTest extends BaseTest {
 
         LOG.info("Submit code button");
         makeAnOrderWithAccountPage.clickSubmitCode();
-        sleep(5000);
+        sleep(6000);
 
         LOG.info("Verify if discount code is applied");
         Assert.assertTrue(makeAnOrderWithAccountPage.isDiscountCodeApplied(),"Discount code is applied");
-        sleep(3000);
+        sleep(6000);
 
         LOG.info("Click 'finish order' button");
         makeAnOrderWithAccountPage.clickFinishOrderButton();
-        sleep(2000);
+        sleep(7000);
 
-        LOG.info("Click dpd radio button");
-        makeAnOrderWithAccountPage.clickDPDradioButton();
+        LOG.info("Select delivery method");
+        makeAnOrderWithAccountPage.clickcourierButton();
+        sleep(8000);
+
+        LOG.info("back button");
+        makeAnOrderWithAccountPage.clickBackButton1();
+        sleep(3000);
+
+        LOG.info("Return to homepage");
+        makeAnOrderWithAccountPage.goBackToHomepage();
         sleep(1000);
 
-        LOG.info("Click 'continue' button");
-        makeAnOrderWithAccountPage.clickContinueButton();
-        sleep(2000);
     }
 }
