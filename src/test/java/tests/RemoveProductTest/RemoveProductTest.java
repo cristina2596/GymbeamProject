@@ -39,11 +39,11 @@ public class RemoveProductTest extends BaseTest {
 
         LOG.info("Click 'add to cart' button");
         removeProductPage.addToCartButton();
-        sleep(2000);
+        sleep(3000);
 
         LOG.info("Verify if confirmation message is displayed");
         Assert.assertTrue(removeProductPage.isConfirmationMessageDisplatyed(), "Confirmation message is displayed");
-        sleep(1000);
+        sleep(3000);
 
         LOG.info("Click cart icon");
         removeProductPage.clickCartIcon();
@@ -55,7 +55,7 @@ public class RemoveProductTest extends BaseTest {
 
         LOG.info("No products in the cart");
         Assert.assertTrue(removeProductPage.isNoProductsInTheCartMessageDisplayed(), "No products in the cart message displayed");
-        sleep(2000);
+        sleep(3000);
 
         LOG.info("Click 'aici' button");
         removeProductPage.clickAiciButton();

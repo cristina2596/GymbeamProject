@@ -17,7 +17,7 @@ public class BlogSectionTest extends BaseTest {
         sleep(2000);
         LOG.info("Consent");
         registerPage.acceptConsent();
-
+sleep(2000);
         LOG.info("Click 'blog'button");
         blogSectionPage.clickBlogSection();
 

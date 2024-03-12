@@ -29,7 +29,7 @@ public class SearchBarTest extends BaseTest {
 
         LOG.info("Search shaker negru");
         searchBarPage.setShakerNegru();
-        sleep(1000);
+        sleep(2000);
 
         LOG.info("Add shaker to cart");
         searchBarPage.addShakerToCart();
@@ -37,7 +37,7 @@ public class SearchBarTest extends BaseTest {
 
         LOG.info("Verify if product is added to the cart");
         Assert.assertTrue(searchBarPage.verifyConfirmationMessage(), "Product is added to the cart");
-        sleep(2000);
+        sleep(3000);
 
         LOG.info("Search item 2");
         searchBarPage.searchBarItem2(item2);

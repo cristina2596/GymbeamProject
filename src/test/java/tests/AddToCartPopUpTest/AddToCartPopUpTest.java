@@ -29,7 +29,7 @@ public class AddToCartPopUpTest extends BaseTest {
 
         LOG.info("Click 'add to cart' button");
         removeProductPage.addToCartButton();
-        sleep(2500);
+sleep(2000);
 
         LOG.info("Verify if the product was added to cart");
         Assert.assertTrue(addToCartPopUpPage.isAddToCartConfirmationMessageDisplayed(),"Confirmation message is displayed");
