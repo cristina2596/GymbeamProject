@@ -18,20 +18,18 @@ public class ForgotPasswordTest extends BaseTest {
 
         LOG.info("Click 'account' icon");
         signInPage.clickAccountIcon();
-
         sleep(5000);
+
         LOG.info("Consent");
         registerPage.acceptConsent();
-
         sleep(2000);
+
         LOG.info("Click 'v-ati uitat parola' button");
         forgotPasswordPage.clickForgotPassword();
-
         sleep(1000);
+
         LOG.info("Insert email");
         forgotPasswordPage.completeEmailField(Email);
-
-
         sleep(2000);
 
         LOG.info("Reset password");
@@ -40,6 +38,6 @@ public class ForgotPasswordTest extends BaseTest {
 
         LOG.info("Verify if error message is displayed");
         Assert.assertTrue(registerPage.isErrorMessageDisplayed(), "Error message is displayed");
-
+        sleep(2000);
     }
 }

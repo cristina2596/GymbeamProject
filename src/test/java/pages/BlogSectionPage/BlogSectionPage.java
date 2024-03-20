@@ -40,7 +40,6 @@ public class BlogSectionPage extends BasePage {
         LOG.info("Click 'Usain Bolt....' article");
         driver.findElement(usainArticle).click();
 
-
     }
 
     public void returnToHomePage() {

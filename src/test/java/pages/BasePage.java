@@ -12,7 +12,7 @@ public class BasePage {
 
     public static void setUP() {
         LOG.info("Start test");
-        System.setProperty("webdriver.chrome.driver", "C://Webdrivers/chromedriver121.exe");
+        System.setProperty("webdriver.chrome.driver", "C://Webdrivers/chromedriver122.exe");
         driver = new ChromeDriver();
         String url = "https://gymbeam.ro/";
         driver.get(url);
@@ -37,7 +37,4 @@ public class BasePage {
             e.printStackTrace();
         }
     }
-
-
 }
-

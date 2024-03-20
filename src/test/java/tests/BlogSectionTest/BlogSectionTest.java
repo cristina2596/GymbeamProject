@@ -15,23 +15,27 @@ public class BlogSectionTest extends BaseTest {
     @Test
     public void blogSection() {
         sleep(2000);
+
         LOG.info("Consent");
         registerPage.acceptConsent();
-sleep(2000);
+        sleep(2000);
+
         LOG.info("Click 'blog'button");
         blogSectionPage.clickBlogSection();
+        sleep(1000);
 
         LOG.info("Click 'personalitati si inspiratie' button");
         blogSectionPage.clickPersonalitatiSiInspiratie();
+        sleep(500);
 
         LOG.info("Click 'Usain Bolt....' article");
         blogSectionPage.clickUsainArticle();
+        sleep(700);
 
         LOG.info("Return to homepage");
         blogSectionPage.returnToHomePage();
         sleep(1000);
     }
-
 
 }
 

@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
+
 import static pages.BasePage.sleep;
 
 public class SubscribeTest extends BaseTest {
@@ -12,13 +13,17 @@ public class SubscribeTest extends BaseTest {
 
     @Test
     public void subscribe() {
+
         String emailAddress = "jisijoh912@hidelux.com";
         sleep(5000);
+
         LOG.info("Consent");
         registerPage.acceptConsent();
+        sleep(2000);
 
         LOG.info("Insert email address");
         subscribePage.inputEmailAddress(emailAddress);
+        sleep(2000);
 
         LOG.info("Click 'trimite' button");
         subscribePage.clickSendButton();

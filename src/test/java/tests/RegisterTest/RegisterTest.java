@@ -20,19 +20,18 @@ public class RegisterTest extends BaseTest {
 
     @Test
     public void register() {
+
         LOG.info("Click 'account' icon");
         signInPage.clickAccountIcon();
-
         sleep(3000L);
 
         LOG.info("Click consent");
         registerPage.acceptConsent();
-
-
         sleep(3000L);
 
         LOG.info("Click 'creati-va un cont' button");
         registerPage.createContButton();
+        sleep(1000);
 
         LOG.info("Fill prenume box");
         registerPage.fillPrenumeBox(prenume);
@@ -57,14 +56,11 @@ public class RegisterTest extends BaseTest {
 
         LOG.info("Click create account");
         registerPage.clickCreateAccount();
-
         sleep(2000);
 
         LOG.info("Verify if Error message displayed");
         Assert.assertTrue(registerPage.isErrorMessageDisplayed(), "Error message is displayed");
-
-        sleep(5000);
+        sleep(4000);
     }
-
 
 }

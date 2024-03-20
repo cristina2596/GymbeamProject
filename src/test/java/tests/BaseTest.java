@@ -23,9 +23,9 @@ public class BaseTest {
     public BlogSectionPage blogSectionPage = BlogSectionPage.getInstance();
     public MyOrdersPage myOrdersPage = MyOrdersPage.getInstance();
     public RemoveProductPage removeProductPage = RemoveProductPage.getInstance();
-    public SearchBarPage searchBarPage=SearchBarPage.getInstance();
-    public AddToCartPopUpPage addToCartPopUpPage= AddToCartPopUpPage.getInstance();
-    public MakeAnOrderWithAccountPage makeAnOrderWithAccountPage= MakeAnOrderWithAccountPage.getInstance();
+    public SearchBarPage searchBarPage = SearchBarPage.getInstance();
+    public AddToCartPopUpPage addToCartPopUpPage = AddToCartPopUpPage.getInstance();
+    public MakeAnOrderWithAccountPage makeAnOrderWithAccountPage = MakeAnOrderWithAccountPage.getInstance();
 
 
     @BeforeSuite

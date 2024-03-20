@@ -16,7 +16,7 @@ public class RemoveProductTest extends BaseTest {
     public void removeProduct() {
         String size = "M";
 
-        sleep(6000);
+        sleep(5000);
         LOG.info("Consent");
         registerPage.acceptConsent();
         sleep(3000);
@@ -51,11 +51,11 @@ public class RemoveProductTest extends BaseTest {
 
         LOG.info("Remove item from the cart");
         removeProductPage.clickRemoveItem();
-
+        sleep(4000);
 
         LOG.info("No products in the cart");
         Assert.assertTrue(removeProductPage.isNoProductsInTheCartMessageDisplayed(), "No products in the cart message displayed");
-        sleep(3000);
+        sleep(4000);
 
         LOG.info("Click 'aici' button");
         removeProductPage.clickAiciButton();

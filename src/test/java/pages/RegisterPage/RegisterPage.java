@@ -31,7 +31,7 @@ public class RegisterPage extends BasePage {
     private By dateOfBirth = By.id("dob");
     private By genderDropdownBox = By.id("gender");
     private By createAccountButton = By.xpath("//button[@class='action submit primary']");
-    private By errorMessage=By.xpath("//div[@class='message-error error message']");
+    private By errorMessage = By.xpath("//div[@class='message-error error message']");
 
 
     public void createContButton() {
@@ -83,11 +83,13 @@ public class RegisterPage extends BasePage {
         driver.findElement(genderDropdownBox).sendKeys(gender);
         driver.findElement(genderDropdownBox).sendKeys(Keys.ENTER);
     }
-    public void clickCreateAccount(){
+
+    public void clickCreateAccount() {
         LOG.info("Click create account");
         driver.findElement(createAccountButton).click();
     }
-    public boolean isErrorMessageDisplayed(){
+
+    public boolean isErrorMessageDisplayed() {
         LOG.info("error message");
         return driver.findElement(errorMessage).isDisplayed();
     }

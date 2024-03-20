@@ -49,9 +49,9 @@ public class MyOrdersPage extends BasePage {
     public void clickBackAction() {
         driver.findElement(backAction).click();
 
-
     }
+
     public void clickHomePageButton() {
-            driver.findElement(goHomePage).click();
+        driver.findElement(goHomePage).click();
     }
 }

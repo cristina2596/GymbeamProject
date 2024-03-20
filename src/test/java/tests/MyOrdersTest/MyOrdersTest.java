@@ -13,14 +13,16 @@ public class MyOrdersTest extends BaseTest {
 
     @Test
     public void myOrdersSection() {
+
+        String email = "cosmeci40@gmail.com";
+        String password = "6esjFgjnJ#XVWQi";
+
         LOG.info("Hover 'account icon'");
         signInPage.hoverAccountIcon();
 
         LOG.info("Click 'account' icon");
         signInPage.clickAccountIcon();
-
-        String email = "cosmeci40@gmail.com";
-        String password = "6esjFgjnJ#XVWQi";
+        sleep(1000);
 
         sleep(4000);
         LOG.info("Consent");
@@ -34,7 +36,7 @@ public class MyOrdersTest extends BaseTest {
 
         LOG.info("Click 'conectatiVa' button");
         signInPage.clickConectatiVa();
-        sleep(5000);
+        sleep(4000);
 
         LOG.info("Click homepage logo");
         myOrdersPage.clickHomePage();

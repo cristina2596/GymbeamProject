@@ -32,7 +32,7 @@ public class RemoveProductPage extends BasePage {
     private By cartIcon = By.xpath("//span[@class='badge-wrapper']");
     private By removeItem = By.xpath("//a[@title='Eliminați elementul']");
     private By noProductsMessage = By.xpath("//div[@class='cart-empty']");
-    private By aiciButton=By.xpath("//a[.='aici']");
+    private By aiciButton = By.xpath("//a[.='aici']");
 
     public void clickFitnessClothes() {
         LOG.info("Click 'fitness clothes ' category");
@@ -54,6 +54,7 @@ public class RemoveProductPage extends BasePage {
     public void setQuantity() {
         LOG.info("Select quantity");
         driver.findElement(plusIcon).click();
+
     }
 
     public void addToCartButton() {
@@ -66,7 +67,7 @@ public class RemoveProductPage extends BasePage {
     }
 
     public void clickCartIcon() {
-        LOG.info("Go to cart ");
+        LOG.info("Go to cart");
         driver.findElement(cartIcon).click();
     }
 
@@ -74,11 +75,13 @@ public class RemoveProductPage extends BasePage {
         LOG.info("Remove item from the cart");
         driver.findElement(removeItem).click();
     }
-    public boolean isNoProductsInTheCartMessageDisplayed(){
+
+    public boolean isNoProductsInTheCartMessageDisplayed() {
         LOG.info("No products in the cart message displayed");
         return driver.findElement(noProductsMessage).isDisplayed();
     }
-    public void clickAiciButton(){
+
+    public void clickAiciButton() {
         LOG.info("Click 'aici' button");
         driver.findElement(aiciButton).click();
     }

@@ -14,9 +14,11 @@ public class SearchBarTest extends BaseTest {
 
     @Test
     public void searchBarTest() {
+
         String item1 = "shaker";
         String item2 = "fier";
-        sleep(6000);
+
+        sleep(5000);
         LOG.info("Consent");
         registerPage.acceptConsent();
         sleep(2500);
@@ -24,7 +26,6 @@ public class SearchBarTest extends BaseTest {
         LOG.info("Search first item");
         searchBarPage.setSearchBar(item1);
         sleep(2000);
-
 
 
         LOG.info("Search shaker negru");
@@ -45,14 +46,14 @@ public class SearchBarTest extends BaseTest {
 
         LOG.info("Item 2 page");
         searchBarPage.searchFier();
-        sleep(1000);
+        sleep(3000);
 
         LOG.info("Add item2 to the cart");
         searchBarPage.addFierToCart();
         sleep(3000);
 
         LOG.info("Item 2 added to the cart confirmation message");
-        Assert.assertTrue(searchBarPage.fierConfirmationMessage(),"The item is addded to the cart");
+        Assert.assertTrue(searchBarPage.fierConfirmationMessage(), "The item is addded to the cart");
         sleep(2000);
 
         LOG.info("Click cart icon");
@@ -60,7 +61,7 @@ public class SearchBarTest extends BaseTest {
         sleep(2000);
 
         LOG.info("Verify if summary box is displayed");
-        Assert.assertTrue(searchBarPage.isSummaryBoxDisplayed(),"Order summary box is displayed");
+        Assert.assertTrue(searchBarPage.isSummaryBoxDisplayed(), "Order summary box is displayed");
         sleep(2000);
     }
 }

@@ -17,7 +17,7 @@ public class MakeAnOrderWithAccountTest extends BaseTest {
         String weight = "340";
         String flavour = "crocant";
         String wheyFlavour = "bogat";
-        String code="andra5";
+        String code = "andra5";
 
         LOG.info("Hover 'account icon'");
         signInPage.hoverAccountIcon();
@@ -100,7 +100,7 @@ public class MakeAnOrderWithAccountTest extends BaseTest {
         sleep(6000);
 
         LOG.info("Verify if discount code is applied");
-        Assert.assertTrue(makeAnOrderWithAccountPage.isDiscountCodeApplied(),"Discount code is applied");
+        Assert.assertTrue(makeAnOrderWithAccountPage.isDiscountCodeApplied(), "Discount code is applied");
         sleep(6000);
 
         LOG.info("Click 'finish order' button");

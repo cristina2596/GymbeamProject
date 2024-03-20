@@ -35,8 +35,8 @@ public class SubscribePage extends BasePage {
     }
 
     public boolean confirmationMessageDisplayed() {
+        LOG.info("Verify if confirmation message is displayed");
         return driver.findElement(confirmation).isDisplayed();
     }
-
 
 }
