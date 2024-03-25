@@ -53,7 +53,7 @@ public class MakeAnOrderWithAccountTest extends BaseTest {
 
         LOG.info("Click 'Alimente sanatoase' Page");
         makeAnOrderWithAccountPage.clickAlimenteSanatoasePage();
-        sleep(1500);
+        sleep(3000);
 
         LOG.info("Click 'unt de arahide'");
         makeAnOrderWithAccountPage.clickUntDeArahide();
