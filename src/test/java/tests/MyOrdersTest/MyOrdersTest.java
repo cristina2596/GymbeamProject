@@ -44,7 +44,7 @@ public class MyOrdersTest extends BaseTest {
 
         LOG.info("Click 'account' icon");
         myOrdersPage.clickAccountIcon();
-        sleep(1000);
+        sleep(2000);
         LOG.info("Click 'my orders'");
         myOrdersPage.clickMyOrders();
         sleep(1000);

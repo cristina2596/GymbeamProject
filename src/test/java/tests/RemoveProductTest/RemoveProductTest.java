@@ -14,7 +14,7 @@ public class RemoveProductTest extends BaseTest {
 
     @Test
     public void removeProduct() {
-        String size = "M";
+        String size = "L";
 
         sleep(5000);
         LOG.info("Consent");
@@ -47,7 +47,7 @@ public class RemoveProductTest extends BaseTest {
 
         LOG.info("Click cart icon");
         removeProductPage.clickCartIcon();
-        sleep(2000);
+        sleep(3000);
 
         LOG.info("Remove item from the cart");
         removeProductPage.clickRemoveItem();
@@ -59,6 +59,6 @@ public class RemoveProductTest extends BaseTest {
 
         LOG.info("Click 'aici' button");
         removeProductPage.clickAiciButton();
-        sleep(1000);
+        sleep(2000);
     }
 }

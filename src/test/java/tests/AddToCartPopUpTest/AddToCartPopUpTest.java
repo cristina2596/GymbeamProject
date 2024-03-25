@@ -29,16 +29,16 @@ public class AddToCartPopUpTest extends BaseTest {
 
         LOG.info("Click 'add to cart' button");
         removeProductPage.addToCartButton();
-        sleep(5000);
+        sleep(4000);
 
         LOG.info("Verify if the product was added to cart");
         Assert.assertTrue(addToCartPopUpPage.isAddToCartConfirmationMessageDisplayed(), "Confirmation message is displayed");
-        sleep(5000);
+        sleep(4000);
 
 
         LOG.info("Click cart icon");
         removeProductPage.clickCartIcon();
-        sleep(5000);
+        sleep(4000);
 
         LOG.info("Verify if summary box is displayed");
         Assert.assertTrue(searchBarPage.isSummaryBoxDisplayed(), "Order summary box is displayed");
@@ -46,11 +46,11 @@ public class AddToCartPopUpTest extends BaseTest {
 
         LOG.info("Remove item from the cart");
         removeProductPage.clickRemoveItem();
-        sleep(2000);
+        sleep(3000);
 
         LOG.info("No products in the cart");
         Assert.assertTrue(removeProductPage.isNoProductsInTheCartMessageDisplayed(), "No products in the cart message displayed");
-        sleep(2000);
+        sleep(3000);
 
         LOG.info("Click 'aici' button");
         removeProductPage.clickAiciButton();
